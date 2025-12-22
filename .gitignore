@@ -1,0 +1,8 @@
+# Go
+*.exe
+*.test
+vendor/
+
+# Node
+node_modules/
+dist/
