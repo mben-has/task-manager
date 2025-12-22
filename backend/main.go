@@ -7,6 +7,9 @@ import (
 )
 
 func main() {
+    fs := http.FileServer(http.Dir("../frontend"))
+    http.Handle("/", fs)
+
     http.HandleFunc("/tasks", func(w http.ResponseWriter, r *http.Request) {
         switch r.Method {
         case "GET":
