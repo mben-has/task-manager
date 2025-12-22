@@ -7,20 +7,20 @@ import (
     "taskmanager/models"
 )
 
-var tasks []models.Task
-var nextID = 1
+var Tasks []models.Task
+var NextID = 1
 
 func GetTasks(w http.ResponseWriter, r *http.Request) {
     w.Header().Set("Content-Type", "application/json")
-    json.NewEncoder(w).Encode(tasks)
+    json.NewEncoder(w).Encode(Tasks)
 }
 
 func CreateTask(w http.ResponseWriter, r *http.Request) {
     var task models.Task
     json.NewDecoder(r.Body).Decode(&task)
-    task.ID = nextID
-    nextID++
-    tasks = append(tasks, task)
+    task.ID = NextID
+    NextID++
+    Tasks = append(Tasks, task)
     w.Header().Set("Content-Type", "application/json")
     json.NewEncoder(w).Encode(task)
 }
@@ -28,11 +28,11 @@ func CreateTask(w http.ResponseWriter, r *http.Request) {
 func ToggleTask(w http.ResponseWriter, r *http.Request) {
     idStr := r.URL.Query().Get("id")
     id, _ := strconv.Atoi(idStr)
-    for i, t := range tasks {
+    for i, t := range Tasks {
         if t.ID == id {
-            tasks[i].Done = !tasks[i].Done
+            Tasks[i].Done = !Tasks[i].Done
             w.Header().Set("Content-Type", "application/json")
-            json.NewEncoder(w).Encode(tasks[i])
+            json.NewEncoder(w).Encode(Tasks[i])
             return
         }
     }
