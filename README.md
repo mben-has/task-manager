@@ -42,8 +42,16 @@ explample:
 cd backend
 go test ./...   
 ```
+or if you want more detailed output:
+
+```bash
+go test -v ./...
+```
+you should see output indicating the tests have passed with ok or PASS status.
 
 ## CI/CD
 - A GitHub Actions workflow is defined in `.github/workflows/ci.yml`.
 - The workflow runs automatically on every push and pull request to the main branch.
 - It sets up Go and executes all backend unit tests to ensure code quality.
+
+![CI Pipeline](screenshots/ci.png)
