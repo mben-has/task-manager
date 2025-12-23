@@ -22,6 +22,8 @@ example:
 cd backend
 go run main.go
 ```
+you should see the server starting on port 8080.
+leave this terminal open to keep the server running.
 
 ### Frontend (HTML)
 The frontend is a simple HTML and JavaScript interface.
@@ -29,6 +31,8 @@ It is served directly from the Go backend.
 
 Open your browser at:
 http://localhost:8080
+
+![Frontend](screenshots/frontend.png)
 
 ### Tests
 - To run unit tests: Go to `backend/` and run `go test`.
