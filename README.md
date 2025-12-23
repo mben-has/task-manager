@@ -1,8 +1,9 @@
 # Task Manager
 
-This project is a simple demonstration of a task manager with a Go backend and a basic HTML frontend.
+The main goal of this project is to showcase the use of CI/CD with unit tests using GitHub Actions.
+It is intentionally kept simple and is not meant to be a full-featured production application.
 
-The main goal of the project is to showcase the use of CI/CD with unit tests using GitHub Actions. It is intentionally kept simple and is not meant to be a full-featured production application.
+The project implements a small task manager with a Go backend and a basic HTML frontend to demonstrate the CI/CD setup in a practical way.
 
 ## Purpose
 
