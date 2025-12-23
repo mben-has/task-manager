@@ -26,8 +26,12 @@ you should see the server starting on port 8080.
 leave this terminal open to keep the server running.
 
 ### Frontend (HTML)
-The frontend is a simple HTML and JavaScript interface.
-It is served directly from the Go backend.
+The frontend is a minimal HTML and JavaScript interface.
+Its purpose is to provide a simple way to interact with the backend API and demonstrate its behavior.
+
+It is intentionally kept simple and does not contain business logic, as the focus of the project is on the backend, testing, and CI setup.
+
+The frontend is served directly from the Go backend.
 
 Open your browser at:
 http://localhost:8080
